@@ -1,5 +1,5 @@
 {
-  "name": "@benlei/tmdb-ts",
+  "name": "tmdb-ts-benlei-fork",
   "version": "1.4.0",
   "description": "TMDB v3 library wrapper",
   "main": "dist/index.js",
