@@ -103,6 +103,13 @@ export interface ExternalIds {
   facebook_id: string;
   instagram_id: string;
   twitter_id: string;
+  tvdb_id?: number;
+  freebase_mid?: string;
+  freebase_id?: string;
+  tvrage_id?: number;
+  wikidata_id: string;
+  tiktok_id?: string;
+  youtube_id?: string;
   id: number;
 }
 
