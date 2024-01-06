@@ -170,9 +170,9 @@ export interface Review {
   author: string;
   author_details: AuthorDetails;
   content: string;
-  created_at: Date;
+  created_at: string;
   id: string;
-  updated_at: Date;
+  updated_at: string;
   url: string;
 }
 

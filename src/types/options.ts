@@ -7,11 +7,13 @@ import {
   ExternalIds,
   Images,
   Keywords,
+  MovieChangeValue,
   MovieLists,
   PeopleImages,
-  PersonTranslations,
+  PersonChangeValue,
   PersonCombinedCredits,
   PersonMovieCredit,
+  PersonTranslations,
   PersonTvShowCredit,
   Recommendations,
   ReleaseDates,
@@ -21,15 +23,13 @@ import {
   SimilarTvShows,
   TaggedImages,
   Translations,
-  Videos,
-  WatchProviders,
-  PersonChangeValue,
-  MovieChangeValue,
-  TvShowChangeValue,
   TvEpisodeChangeValue,
   TvEpisodeCredit,
   TvEpisodeTranslations,
   TvSeasonChangeValue,
+  TvShowChangeValue,
+  Videos,
+  WatchProviders,
 } from '.';
 
 export interface LanguageOption {
@@ -45,8 +45,8 @@ export interface PageOption {
 }
 
 export interface ChangeOption extends PageOption {
-  start_date?: Date;
-  end_date?: Date;
+  start_date?: string;
+  end_date?: string;
 }
 
 export type AppendToResponseMovieKey =

@@ -53,7 +53,7 @@ export enum ReleaseDateType {
 export interface ReleaseDate {
   certification: string;
   iso_639_1: string;
-  release_date: Date;
+  release_date: string;
   type: ReleaseDateType;
   note: string;
 }
@@ -130,7 +130,7 @@ export interface Dates {
 export interface MoviesPlayingNow {
   page: number;
   results: Movie[];
-  dates: Dates;
+  dates: string;
   total_pages: number;
   total_results: number;
 }
