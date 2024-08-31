@@ -1,4 +1,3 @@
-import { BaseEndpoint } from './base';
 import {
   AggregateCredits,
   AlternativeTitles,
@@ -11,7 +10,6 @@ import {
   EpisodeGroups,
   ExternalIds,
   Images,
-  Keywords,
   LanguageOption,
   LatestTvShows,
   OnTheAir,
@@ -25,12 +23,14 @@ import {
   SimilarTvShows,
   TopRatedTvShows,
   Translations,
+  TvKeywords,
   TvShowChangeValue,
   TvShowDetails,
   TvShowsAiringToday,
   Videos,
   WatchProviders,
 } from '../types';
+import { BaseEndpoint } from './base';
 
 const BASE_TV = '/tv';
 
@@ -104,8 +104,8 @@ export class TvShowsEndpoint extends BaseEndpoint {
     return await this.api.get<Images>(`${BASE_TV}/${id}/images`);
   }
 
-  async keywords(id: number): Promise<Keywords> {
-    return await this.api.get<Keywords>(`${BASE_TV}/${id}/keywords`);
+  async keywords(id: number): Promise<TvKeywords> {
+    return await this.api.get<TvKeywords>(`${BASE_TV}/${id}/keywords`);
   }
 
   async recommendations(

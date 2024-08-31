@@ -1,4 +1,3 @@
-import { BaseEndpoint } from './base';
 import {
   AlternativeTitles,
   AppendToResponse,
@@ -8,11 +7,11 @@ import {
   Credits,
   ExternalIds,
   Images,
-  Keywords,
   LanguageOption,
   LatestMovie,
   MovieChangeValue,
   MovieDetails,
+  MovieKeywords,
   MovieLists,
   MoviesPlayingNow,
   PageOption,
@@ -28,6 +27,7 @@ import {
   Videos,
   WatchProviders,
 } from '../types';
+import { BaseEndpoint } from './base';
 
 const BASE_MOVIE = '/movie';
 
@@ -80,8 +80,8 @@ export class MoviesEndpoint extends BaseEndpoint {
     return await this.api.get<Images>(`${BASE_MOVIE}/${id}/images`);
   }
 
-  async keywords(id: number): Promise<Keywords> {
-    return await this.api.get<Keywords>(`${BASE_MOVIE}/${id}/keywords`);
+  async keywords(id: number): Promise<MovieKeywords> {
+    return await this.api.get<MovieKeywords>(`${BASE_MOVIE}/${id}/keywords`);
   }
 
   async lists(

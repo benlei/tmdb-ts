@@ -6,8 +6,8 @@ import {
   EpisodeGroups,
   ExternalIds,
   Images,
-  Keywords,
   MovieChangeValue,
+  MovieKeywords,
   MovieLists,
   PeopleImages,
   PersonChangeValue,
@@ -171,7 +171,7 @@ export type AppendToResponse<
             }
           : object) &
         ('keywords' extends T[number]
-          ? { keywords: Omit<Keywords, 'id'> }
+          ? { keywords: Omit<MovieKeywords, 'id'> }
           : object) &
         ('lists' extends T[number]
           ? { lists: Omit<MovieLists, 'id'> }

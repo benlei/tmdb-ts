@@ -17,7 +17,12 @@ export interface Keyword {
   name: string;
 }
 
-export interface Keywords {
+export interface MovieKeywords {
   id: number;
   keywords: Keyword[];
+}
+
+export interface TvKeywords {
+  id: number;
+  results: Keyword[];
 }
